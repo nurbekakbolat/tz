@@ -1,0 +1,107 @@
+.header {
+    background-color: transparent;
+    height: 303px;
+    width: 1008px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-text {
+    font-weight: 700;
+    font-size: 84px;
+    line-height: 100.8px;
+    margin: 0px;
+}
+
+.gradient-text {
+    background: linear-gradient(
+      97deg,
+      #7C6FCF 0%,
+      #74AEAA 45%,
+      #6FCF97 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.split-text {
+    white-space: pre-wrap;
+    display: block;
+    width: 100%;
+}
+
+.split-text::before {
+    content: "DO YOU WANT TO LEARN MORE ABOUT CRYPTOCURRENCIES";
+    display: block;
+}
+
+.subtext {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40.8px;
+    color: #828282;
+}
+
+.subtext::before {
+    content: "Subscribe to our channel to learn more";
+    display: block;
+}
+
+@media screen and (max-width: 767px) {
+    .main-text {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 43.2px;
+        
+        word-wrap: break-word;
+    }
+
+    .header {
+        width: calc(100% - 50px);
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .subtext {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 24px;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .subtext::before {
+        content: "Subscribe to our channel to learn \a";
+        display: block;
+    }
+
+    .subtext::after {
+        content: "more";
+        display: block;
+    }
+
+    .centered-text {
+        display: flex;
+        align-items: center; /* Vertically centers the text */
+        justify-content: center; /* Horizontally centers the text */
+        height: 100%;
+        text-align: center;
+    }
+    
+    .split-text {
+        white-space: pre-wrap; /* Ensures whitespace is respected */
+        display: block;
+        width: 100%; /* Ensure the label spans the required width */
+    }
+
+    .split-text::before {
+        content: "DO YOU WANT TO LEARN MORE \a ABOUT\a";
+        display: block;
+    }
+
+    .split-text::after {
+        content: "CRYPTOCURRENCIES";
+        display: block;
+    }
+}
